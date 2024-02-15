@@ -676,6 +676,10 @@
             function alterarQuantidade(regional, loja, display) {
                 let n = prompt(`Qual a nova quantidade do display [${display}] na loja [${regional}: ${loja}] ?`);
 
+                if (n == null) {
+                    return;
+                }
+
                 // verifica se é número positivo
                 if (isNaN(n)) {
                     alert('Por favor, insira um número válido');
